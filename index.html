@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <!-- Chèn Font chữ hiện đại -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body {
+            background: radial-gradient(circle at top left, #1e1b4b, #0f172a);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Khung Profile chính */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Cột trái: Thông tin chính */
+        .sidebar {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            margin: 0 auto 20px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .name { font-size: 1.5rem; font-weight: 800; margin-bottom: 5px; }
+        .tag { font-size: 0.85rem; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* Cột phải: Nội dung chi tiết */
+        .content { padding: 40px; }
+
+        section { margin-bottom: 30px; }
+        h2 { font-size: 1.2rem; margin-bottom: 15px; color: var(--primary); display: flex; align-items: center; }
+        h2::after { content: ""; flex: 1; height: 1px; background: rgba(255, 255, 255, 0.1); margin-left: 15px; }
+
+        p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; }
+
+        .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .skill-badge {
+            background: rgba(99, 102, 241, 0.15);
+            color: #c7d2fe;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .contact-btn:hover { transform: translateY(-3px); }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 768px) {
+            .glass-card { grid-template-columns: 1fr; }
+            .sidebar { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <!-- Bên trái -->
+        <div class="sidebar">
+            <div class="avatar">
+    <img src=" https://drive.google.com/file/d/1jLkQwuaqXveRMmNFUCagwhMrC99AO6SK/view?usp=drivesdk  https://drive.google.com/file/d/1tE40on8SsvFxQ7zC9o0ZMXTiqD6rlfzw/view?usp=drivesdk" alt="Ảnh đại diện" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+</div>
+
+            <h1 class="name">Vương Anh Tuấn</h1>
+            <p class="tag">Creative Developer</p>
+            
+            <div style="margin-top: 30px; text-align: left; font-size: 0.85rem; color: #94a3b8;">
+                <p></p>
+                <p></p>
+                <p>🌐 www.yourwebsite.com</p>
+            </div>
+
+            <a href="mailto:your-email@gmail.com" class="contact-btn">Liên hệ tôi</a>
+        </div>
+
+        <!-- Bên phải -->
+        <div class="content">
+            <section>
+                <h2>GIỚI THIỆU</h2>
+                <p>Em tên là Vương Anh Tuấn
+                       Học sinh lớp 12A7
+                       Trường THPT Thạch Thành 1
+ Ưu điểm: vui vẻ hoà đồng thân thiện với tất cả mọi người
+Sở thích : chơi thể thao , nghe âm nhạc .</p>
+            </section>
+
+            <section>
+                <h2>KỸ NĂNG</h2>
+                <div class="skills">
+                    <span class="skill-badge">Thiết kế UI/UX</span>
+                    <span class="skill-badge">HTML/CSS/JS</span>
+                    <span class="skill-badge">Marketing Online</span>
+                    <span class="skill-badge">Quay dựng Video</span>
+                    <span class="skill-badge">Thuyết trình</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>KINH NGHIỆM</h2>
+                <p style="margin-bottom: 10px;"><strong>Freelancer Designer</strong> (2024 - Hiện tại)</p>
+                <p style="margin-bottom: 10px;"><strong>Trưởng nhóm Content</strong> tại Công ty XYZ (2022 - 2023)</p>
+            </section>
+
+            <section>
+                <h2>SỞ THÍCH</h2>
+                <p>📸 Chụp ảnh, 📚 Đọc sách 
